@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lunes 13 de Julio del 2026 - Poema</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:
+radial-gradient(circle at top,#44305d 0%,#191227 35%,#090810 65%,#030305 100%);
+
+overflow-x:hidden;
+
+font-family:'Cormorant Garamond',serif;
+
+color:#f8f3ff;
+
+position:relative;
+
+min-height:100vh;
+
+}
+
+
+/*=========================================
+AURORA
+=========================================*/
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+inset:-25%;
+
+background:
+
+radial-gradient(circle,#8f6dff33 0%,transparent 55%),
+
+radial-gradient(circle,#ff77c933 0%,transparent 60%),
+
+radial-gradient(circle,#6ee7ff22 0%,transparent 60%),
+
+radial-gradient(circle,#ffd98d22 0%,transparent 65%);
+
+filter:blur(70px);
+
+animation:aurora 18s linear infinite alternate;
+
+pointer-events:none;
+
+z-index:-6;
+
+}
+
+@keyframes aurora{
+
+0%{
+
+transform:
+translate(-5%,0)
+rotate(0deg)
+scale(1);
+
+}
+
+100%{
+
+transform:
+translate(6%,-5%)
+rotate(8deg)
+scale(1.18);
+
+}
+
+}
+
+
+/*=========================================
+NEBULOSA
+=========================================*/
+
+.nebula{
+
+position:fixed;
+
+inset:0;
+
+overflow:hidden;
+
+pointer-events:none;
+
+z-index:-5;
+
+}
+
+.nebula span{
+
+position:absolute;
+
+border-radius:50%;
+
+filter:blur(90px);
+
+opacity:.18;
+
+animation:floatNebula linear infinite alternate;
+
+}
+
+.nebula span:nth-child(1){
+
+width:500px;
+height:500px;
+
+background:#c18fff;
+
+top:-120px;
+left:-100px;
+
+animation-duration:22s;
+
+}
+
+.nebula span:nth-child(2){
+
+width:450px;
+height:450px;
+
+background:#6edbff;
+
+bottom:-160px;
+right:-120px;
+
+animation-duration:19s;
+
+}
+
+.nebula span:nth-child(3){
+
+width:420px;
+height:420px;
+
+background:#ff7cc9;
+
+top:40%;
+left:65%;
+
+animation-duration:28s;
+
+}
+
+@keyframes floatNebula{
+
+from{
+
+transform:
+translateY(0)
+translateX(0)
+scale(1);
+
+}
+
+to{
+
+transform:
+translateY(-60px)
+translateX(40px)
+scale(1.15);
+
+}
+
+}
+
+
+/*=========================================
+ESTRELLAS
+=========================================*/
+
+.stars{
+
+position:fixed;
+
+inset:0;
+
+overflow:hidden;
+
+pointer-events:none;
+
+z-index:-4;
+
+}
+
+.star{
+
+position:absolute;
+
+background:white;
+
+border-radius:50%;
+
+animation:
+twinkle ease-in-out infinite,
+moveStar linear infinite;
+
+}
+
+.star:nth-child(1){top:5%;left:8%;width:2px;height:2px;animation-duration:2s,70s;}
+.star:nth-child(2){top:11%;left:27%;width:3px;height:3px;animation-duration:3s,90s;}
+.star:nth-child(3){top:18%;left:70%;width:2px;height:2px;animation-duration:4s,60s;}
+.star:nth-child(4){top:30%;left:12%;width:2px;height:2px;animation-duration:2.8s,95s;}
+.star:nth-child(5){top:42%;left:88%;width:3px;height:3px;animation-duration:3.2s,100s;}
+.star:nth-child(6){top:52%;left:48%;width:2px;height:2px;animation-duration:2.7s,75s;}
+.star:nth-child(7){top:63%;left:24%;width:2px;height:2px;animation-duration:4.3s,88s;}
+.star:nth-child(8){top:76%;left:80%;width:3px;height:3px;animation-duration:2.4s,65s;}
+.star:nth-child(9){top:84%;left:38%;width:2px;height:2px;animation-duration:3.7s,80s;}
+.star:nth-child(10){top:91%;left:60%;width:2px;height:2px;animation-duration:2.9s,90s;}
+
+@keyframes twinkle{
+
+0%,100%{
+
+opacity:.15;
+
+transform:scale(.7);
+
+}
+
+50%{
+
+opacity:1;
+
+transform:scale(1.8);
+
+}
+
+}
+
+@keyframes moveStar{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-120px);
+
+}
+
+}
+
+
+/*=========================================
+COMETAS
+=========================================*/
+
+.comet{
+
+position:fixed;
+
+width:180px;
+
+height:2px;
+
+background:
+linear-gradient(to right,
+transparent,
+white,
+#ffe7b8);
+
+box-shadow:
+
+0 0 15px white,
+
+0 0 30px #ffe7b8;
+
+transform:rotate(-35deg);
+
+opacity:0;
+
+pointer-events:none;
+
+z-index:-3;
+
+}
+
+.comet.one{
+
+top:8%;
+
+left:-20%;
+
+animation:cometFly 15s linear infinite;
+
+}
+
+.comet.two{
+
+top:28%;
+
+left:-30%;
+
+animation:cometFly 20s linear infinite 8s;
+
+}
+
+@keyframes cometFly{
+
+0%{
+
+opacity:0;
+
+transform:
+translate(0,0)
+rotate(-35deg);
+
+}
+
+8%{
+
+opacity:1;
+
+}
+
+30%{
+
+opacity:0;
+
+transform:
+translate(1700px,700px)
+rotate(-35deg);
+
+}
+
+100%{
+
+opacity:0;
+
+}
+
+}
+
+
+/*=========================================
+CORAZONES DE CRISTAL
+=========================================*/
+
+.hearts{
+
+position:fixed;
+
+inset:0;
+
+overflow:hidden;
+
+pointer-events:none;
+
+z-index:-2;
+
+}
+
+.heart{
+
+position:absolute;
+
+font-size:18px;
+
+opacity:.20;
+
+animation:heartRise linear infinite;
+
+filter:
+
+drop-shadow(0 0 10px #ff8adf)
+drop-shadow(0 0 18px #ffd6f4);
+
+}
+
+@keyframes heartRise{
+
+from{
+
+transform:
+translateY(110vh)
+scale(.4)
+rotate(0deg);
+
+opacity:0;
+
+}
+
+15%{
+
+opacity:.25;
+
+}
+
+100%{
+
+transform:
+translateY(-20vh)
+scale(1.2)
+rotate(360deg);
+
+opacity:0;
+
+}
+
+}
+
+.heart:nth-child(1){left:6%;animation-duration:19s;}
+.heart:nth-child(2){left:15%;animation-duration:16s;}
+.heart:nth-child(3){left:24%;animation-duration:21s;}
+.heart:nth-child(4){left:36%;animation-duration:18s;}
+.heart:nth-child(5){left:49%;animation-duration:22s;}
+.heart:nth-child(6){left:60%;animation-duration:20s;}
+.heart:nth-child(7){left:73%;animation-duration:17s;}
+.heart:nth-child(8){left:84%;animation-duration:24s;}
+.heart:nth-child(9){left:93%;animation-duration:19s;}
+
+
+/*=========================================
+PÉTALOS LUMINOSOS
+=========================================*/
+
+.petals{
+
+position:fixed;
+
+inset:0;
+
+overflow:hidden;
+
+pointer-events:none;
+
+z-index:-2;
+
+}
+
+.petal{
+
+position:absolute;
+
+width:18px;
+
+height:18px;
+
+background:linear-gradient(145deg,#ffd6ef,#ff93c7,#fff0f7);
+
+border-radius:
+60% 40%
+70% 30%
+60% 40%
+30% 70%;
+
+opacity:.28;
+
+filter:
+blur(.3px)
+drop-shadow(0 0 10px rgba(255,170,220,.7));
+
+animation:petalFall linear infinite;
+
+}
+
+@keyframes petalFall{
+
+0%{
+
+transform:
+translateY(-120px)
+translateX(0)
+rotate(0deg)
+scale(.7);
+
+opacity:0;
+
+}
+
+15%{
+
+opacity:.35;
+
+}
+
+100%{
+
+transform:
+translateY(120vh)
+translateX(130px)
+rotate(720deg)
+scale(1.2);
+
+opacity:0;
+
+}
+
+}
+
+.petal:nth-child(1){left:4%;animation-duration:16s;}
+.petal:nth-child(2){left:12%;animation-duration:19s;}
+.petal:nth-child(3){left:21%;animation-duration:18s;}
+.petal:nth-child(4){left:30%;animation-duration:22s;}
+.petal:nth-child(5){left:42%;animation-duration:17s;}
+.petal:nth-child(6){left:53%;animation-duration:20s;}
+.petal:nth-child(7){left:66%;animation-duration:21s;}
+.petal:nth-child(8){left:76%;animation-duration:18s;}
+.petal:nth-child(9){left:87%;animation-duration:24s;}
+.petal:nth-child(10){left:95%;animation-duration:19s;}
+
+
+/*=========================================
+CONTENEDOR
+=========================================*/
+
+.wrapper{
+
+width:min(900px,92%);
+
+margin:90px auto;
+
+position:relative;
+
+z-index:5;
+
+}
+
+.poem{
+
+position:relative;
+
+padding:80px 65px;
+
+border-radius:36px;
+
+background:
+
+linear-gradient(
+180deg,
+rgba(255,255,255,.08),
+rgba(255,255,255,.04));
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.14);
+
+overflow:hidden;
+
+box-shadow:
+
+0 0 40px rgba(255,255,255,.06),
+
+0 0 80px rgba(192,128,255,.18),
+
+0 0 140px rgba(255,140,200,.10);
+
+}
+
+.poem::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+padding:2px;
+
+border-radius:36px;
+
+background:
+linear-gradient(
+135deg,
+rgba(255,255,255,.45),
+rgba(255,170,230,.08),
+rgba(145,180,255,.35));
+
+-webkit-mask:
+linear-gradient(#000 0 0) content-box,
+linear-gradient(#000 0 0);
+
+-webkit-mask-composite:xor;
+
+mask-composite:exclude;
+
+pointer-events:none;
+
+}
+
+.poem::after{
+
+content:"";
+
+position:absolute;
+
+width:700px;
+
+height:700px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(circle,
+rgba(255,255,255,.10),
+transparent 70%);
+
+top:-350px;
+
+right:-250px;
+
+pointer-events:none;
+
+}
+
+
+/*=========================================
+ADORNOS
+=========================================*/
+
+.corner{
+
+position:absolute;
+
+font-size:42px;
+
+color:rgba(255,228,245,.25);
+
+animation:glowCorner 5s ease-in-out infinite;
+
+}
+
+.corner.tl{
+
+top:20px;
+left:24px;
+
+}
+
+.corner.tr{
+
+top:20px;
+right:24px;
+
+transform:rotate(90deg);
+
+}
+
+.corner.bl{
+
+bottom:20px;
+left:24px;
+
+transform:rotate(-90deg);
+
+}
+
+.corner.br{
+
+bottom:20px;
+right:24px;
+
+transform:rotate(180deg);
+
+}
+
+@keyframes glowCorner{
+
+0%,100%{
+
+opacity:.25;
+
+transform:scale(1);
+
+}
+
+50%{
+
+opacity:.8;
+
+transform:scale(1.15);
+
+}
+
+}
+
+
+/*=========================================
+TEXTOS
+=========================================*/
+
+h1{
+
+font-family:'Cinzel',serif;
+
+font-size:2.35rem;
+
+text-align:center;
+
+line-height:1.5;
+
+letter-spacing:3px;
+
+color:#fff8fd;
+
+text-shadow:
+
+0 0 15px rgba(255,255,255,.7),
+
+0 0 35px rgba(255,170,220,.45);
+
+margin-bottom:35px;
+
+}
+
+.date{
+
+text-align:center;
+
+font-size:1.2rem;
+
+color:#f7dff0;
+
+letter-spacing:2px;
+
+margin-bottom:45px;
+
+}
+
+.greeting{
+
+font-size:2rem;
+
+text-align:center;
+
+color:#ffe4f5;
+
+margin-bottom:35px;
+
+}
+
+p{
+
+font-size:1.45rem;
+
+line-height:2.1;
+
+text-align:justify;
+
+margin-bottom:26px;
+
+color:#fffafc;
+
+text-shadow:0 0 10px rgba(255,255,255,.05);
+
+}
+
+strong{
+
+color:#ffe8b8;
+
+font-weight:700;
+
+}
+
+.signature{
+
+text-align:center;
+
+font-size:1.8rem;
+
+margin-top:60px;
+
+color:#ffe3f5;
+
+line-height:2;
+
+}
+
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media(max-width:768px){
+
+.poem{
+
+padding:55px 28px;
+
+}
+
+h1{
+
+font-size:1.7rem;
+
+}
+
+.greeting{
+
+font-size:1.7rem;
+
+}
+
+p{
+
+font-size:1.28rem;
+
+line-height:1.95;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="nebula">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<div class="stars">
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+</div>
+
+<div class="comet one"></div>
+<div class="comet two"></div>
+
+<div class="hearts">
+<div class="heart">❤</div>
+<div class="heart">❤</div>
+<div class="heart">❤</div>
+<div class="heart">❤</div>
+<div class="heart">❤</div>
+<div class="heart">❤</div>
+<div class="heart">❤</div>
+<div class="heart">❤</div>
+<div class="heart">❤</div>
+</div>
+
+<div class="petals">
+<div class="petal"></div>
+<div class="petal"></div>
+<div class="petal"></div>
+<div class="petal"></div>
+<div class="petal"></div>
+<div class="petal"></div>
+<div class="petal"></div>
+<div class="petal"></div>
+<div class="petal"></div>
+<div class="petal"></div>
+</div>
+
+<div class="wrapper">
+
+<div class="poem">
+
+<div class="corner tl">❦</div>
+<div class="corner tr">❦</div>
+<div class="corner bl">❦</div>
+<div class="corner br">❦</div>
+
+<h1>
+CUANDO LA NOCHE GUARDA TU NOMBRE,<br>
+MI CORAZÓN ENCUENTRA SU HOGAR
+</h1>
+
+<div class="date">
+Lunes, 13 de julio del 2026 — Noche.
+</div>
+
+<div class="greeting">
+Mi princesa hermosa:
+</div>
+
+<p>
+Esta noche el cielo parece más inmenso de lo normal, como si quisiera enseñarme que existen distancias capaces de separar dos cuerpos, pero jamás dos corazones que aprendieron a latir con el mismo sentimiento. Y mientras las estrellas aparecen una a una, yo vuelvo a hacer lo que más feliz me hace al terminar el día: pensar en ti.
+</p>
+
+<p>
+Pienso en tu sonrisa, esa que llega sin pedir permiso y convierte cualquier momento en un recuerdo que quiero conservar para siempre. Pienso en tus ojos, donde descubrí un hogar que nunca imaginé encontrar. Pienso en tu voz, que incluso cuando no la escucho sigue viviendo dentro de mí como la melodía más bonita que conoce mi alma.
+</p>
+
+<p>
+Hay noches en las que el silencio pesa. Pero esta no. Porque aunque no estés aquí, cada pensamiento tuyo llena todos los espacios vacíos y me recuerda que amar también significa aprender a abrazar la espera con esperanza.
+</p>
+
+<p>
+Quisiera que pudieras sentir cómo pronuncio tu nombre en silencio antes de dormir, porque cada vez que lo hago mi corazón sonríe. No existe una sola parte de este día en la que no hayas aparecido en mis pensamientos. Estuviste en cada sueño despierto, en cada sonrisa inesperada y en cada pequeño instante donde mi felicidad decidió llevar tu nombre.
+</p>
+
+<p>
+Y si soy completamente sincero, hay algo que esta noche deseo con una intensidad imposible de explicar.
+</p>
+
+<p>
+<strong>Tengo unas inmensas ganas de volver a besarte.</strong>
+</p>
+
+<p>
+De acercarme lentamente a ti, perderme en la tranquilidad de tu mirada y sentir que el tiempo deja de existir cuando nuestros labios vuelven a encontrarse. Extraño esos besos que parecen detener el mundo entero, esos que hacen que cualquier preocupación desaparezca, esos que me recuerdan que el lugar donde más feliz soy siempre será contigo.
+</p>
+
+<p>
+Extraño abrazarte mientras el universo sigue girando sin que nosotros tengamos prisa. Extraño acariciar tu rostro, tomar tu mano y sentir que, aunque todo cambie alrededor, nuestro amor permanece firme, creciendo con cada día que pasa.
+</p>
+
+<p>
+A veces cierro los ojos e imagino ese momento en el que vuelva a verte. Me imagino corriendo hacia ti solamente para abrazarte tan fuerte que todos estos días de espera desaparezcan en un solo instante. Después levantaría suavemente tu rostro, sonreiría como un niño que acaba de encontrar el regalo más hermoso de su vida y te regalaría un beso lleno de todo lo que he guardado durante estos días.
+</p>
+
+<p>
+Porque sí... cada día que pasa sin besarte hace que el siguiente beso tenga todavía más amor.
+</p>
+
+<p>
+Y qué bonito será cuando llegue ese momento.
+</p>
+
+<p>
+Quiero seguir construyendo recuerdos contigo. Quiero seguir descubriendo nuevas razones para enamorarme aún más de la mujer maravillosa que eres. Quiero seguir escribiendo historias donde tú siempre seas mi página favorita y mi capítulo más hermoso.
+</p>
+
+<p>
+<strong>Gracias por existir.</strong>
+</p>
+
+<p>
+Gracias por aparecer en mi vida cuando menos lo esperaba y convertir días comunes en recuerdos extraordinarios. Gracias por enseñarme que el amor verdadero no necesita ser perfecto; solo necesita ser sincero, paciente y valiente para seguir creciendo incluso cuando la distancia intenta ponerlo a prueba.
+</p>
+
+<p>
+Esta noche quiero que cierres los ojos por un momento y sientas todo mi cariño llegando hasta donde estés. Imagina que cada estrella lleva un pedacito de este poema, que la brisa acaricia tu cabello como si fueran mis manos y que la luna ilumina tu sonrisa porque también sabe que eres la persona más especial de mi universo.
+</p>
+
+<p>
+Si algún día llegara a faltarme la inspiración para escribir, seguiría teniendo la razón más importante para sonreír: tú.
+</p>
+
+<p>
+<strong>Porque eres la calma después de mis tormentas.</strong>
+</p>
+
+<p>
+<strong>Eres el sueño que nunca quiero despertar.</strong>
+</p>
+
+<p>
+<strong>Eres la coincidencia más hermosa que el destino escribió para mi vida.</strong>
+</p>
+
+<p>
+Y eres ese amor que cada noche consigue que mi corazón vuelva a latir con más fuerza que la noche anterior.
+</p>
+
+<p>
+Te prometo que seguiré cuidando este amor con toda mi alma. Seguiré soñando con el día en que pueda mirarte de cerca otra vez, tomar tus manos, perderme en tus ojos y besarte con toda la ternura, la pasión y el amor que llevo guardados para ti.
+</p>
+
+<p>
+Hasta que llegue ese momento, seguiré dejando un pedacito de mi corazón en cada palabra que escribo, porque es la manera más bonita que tengo de abrazarte cuando la distancia intenta impedirlo.
+</p>
+
+<p>
+<strong>Duerme tranquila, mi niña hermosa.</strong>
+</p>
+
+<p>
+Que mientras tú descansas, habrá un corazón que seguirá pronunciando tu nombre bajito, sonriendo en silencio y esperando con ilusión el instante en que pueda volver a decirte cuánto te amo... pero esta vez entre un abrazo infinito y un beso que haga sentir a nuestros corazones que, por fin, volvieron a encontrarse.
+</p>
+
+<p>
+Te amo con todo mi corazón, hoy, esta noche, mañana y en cada amanecer que la vida nos regale. Y si el universo me permitiera pedir un solo deseo antes de dormir, sería despertar un día con la dicha de tenerte frente a mí para volver a besarte como si fuera el primer beso... y al mismo tiempo, como si nunca fuera el último.
+</p>
+
+<div class="signature">
+
+✦<br><br>
+
+Con todo el amor que existe en mi corazón,<br>
+
+para la mujer que convirtió cada noche<br>
+
+en el lugar más hermoso de mi vida.<br><br>
+
+❤️ Siempre tú. Siempre nosotros. ❤️
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
